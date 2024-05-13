@@ -1,0 +1,171 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+           jxb:version="1.0">
+  <xs:element name="use">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id"/>
+          <xs:attribute type="xs:string" name="name"/>
+          <xs:attribute type="xs:byte" name="version"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="devkit">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="ref"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="import">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="index"/>
+          <xs:attribute type="xs:string" name="ref"/>
+          <xs:attribute type="xs:string" name="implicit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="child">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:long" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="name" use="optional"/>
+          <xs:attribute type="xs:string" name="index" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="concept">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="child" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="reference" minOccurs="0"/>
+        <xs:element ref="property" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:long" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+      <xs:attribute type="xs:string" name="flags" use="optional"/>
+      <xs:attribute type="xs:string" name="index" use="optional"/>
+      <xs:attribute type="xs:long" name="stub" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reference">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:long" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="name" use="optional"/>
+          <xs:attribute type="xs:string" name="index" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:long" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="name" use="optional"/>
+          <xs:attribute type="xs:string" name="index" use="optional"/>
+          <xs:attribute type="xs:string" name="role" use="optional"/>
+          <xs:attribute type="xs:string" name="value" use="optional">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <jxb:property name="valueAttribute"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="language">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="concept" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="role" use="optional"/>
+          <xs:attribute type="xs:string" name="to" use="optional"/>
+          <xs:attribute type="xs:string" name="resolve" use="optional"/>
+          <xs:attribute type="xs:string" name="node" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="node">
+    <xs:annotation>
+        <xs:appinfo>
+            <jxb:class name="MPSNode"/>
+        </xs:appinfo>
+    </xs:annotation>  
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="property" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="ref" minOccurs="0"/>
+        <xs:element ref="node" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="concept" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="role" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persistence">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="version"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="languages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="use"/>
+        <xs:element ref="devkit"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="imports">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="import"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="language" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="model">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="persistence"/>
+        <xs:element ref="languages"/>
+        <xs:element ref="imports"/>
+        <xs:element ref="registry"/>
+        <xs:element ref="node" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="ref"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

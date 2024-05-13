@@ -1,0 +1,584 @@
+typesystem model: Boardgame.typesystem.txt
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_NaechsteFigur
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FigurType [target id (59) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> naechsteFigur [target id (85)]
+  [(85)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = naechsteFigur
+    concept -> NaechsteFigur [target id (4) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_FigurRef
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FigurType [target id (59) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> figurRef [target id (86)]
+  [(86)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = figurRef
+    concept -> FigurRef [target id (65) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_SpielerRef
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> PlayerType [target id (57) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> spielerRef [target id (87)]
+  [(87)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = spielerRef
+    concept -> SpielerRef [target id (67) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_IfStatement
+  virtualPackage = controlflow
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> ifStatement [target id (88)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> clause [target id (69) Boardgame.structure]
+  [(88)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = ifStatement
+    concept -> IfStatement [target id (33) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_VarDeclaration
+  virtualPackage = expr
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> varDeclaration [target id (89)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> var_init [target id (70) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> varDeclaration [target id (89)]
+  [(89)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = varDeclaration
+    concept -> VarDeclaration [target id (5) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_VarReference
+  virtualPackage = expr
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> varReference [target id (90)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> var [target id (26) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> varReference [target id (90)]
+  [(90)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = varReference
+    concept -> VarReference [target id (25) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_equals
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> equals [target id (91)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> PlayerType [target id (57) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> equals [target id (91)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> other [target id (79) Boardgame.structure]
+  [(91)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = equals
+    concept -> Equals [target id (7) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_ImStart
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> imStart [target id (92)]
+  [(92)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = imStart
+    concept -> ImStart [target id (8) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_FigurBewege
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = VoidType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> bewege [target id (93)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> bewege [target id (93)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> anzahlFelder [target id (64) Boardgame.structure]
+  [(93)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = bewege
+    concept -> FigurBewege [target id (2) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_getFeld
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> getFeld [target id (94)]
+  [(94)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = getFeld
+    concept -> getFeld [target id (9) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_FeldRef
+  virtualPackage = feld
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> feldRef [target id (95)]
+  [(95)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = feldRef
+    concept -> FeldRef [target id (71) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_BrettRef
+  virtualPackage = brett
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> BrettType [target id (63) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> brettRef [target id (96)]
+  [(96)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = brettRef
+    concept -> BrettRef [target id (31) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_BelegtDurch
+  virtualPackage = brett
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> PlayerType [target id (57) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> belegtDurch [target id (97)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> belegtDurch [target id (97)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> index [target id (74) Boardgame.structure]
+  [(97)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = belegtDurch
+    concept -> BelegtDurch [target id (10) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_nachbarFeld
+  virtualPackage = brett
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> nachbarFeld [target id (98)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> nachbarFeld [target id (98)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> feld [target id (75) Boardgame.structure]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> nachbarFeld [target id (98)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> anzahlFelder [target id (76) Boardgame.structure]
+  [(98)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = nachbarFeld
+    concept -> nachbarFeld [target id (11) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_BrettBewege
+  virtualPackage = brett
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = VoidType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> bewege [target id (99)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> bewege [target id (99)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> anzahlFelder [target id (78) Boardgame.structure]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> bewege [target id (99)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> feld [target id (77) Boardgame.structure]
+  [(99)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = bewege
+    concept -> BrettBewege [target id (12) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_EntfernungZumZiel
+  virtualPackage = feld
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> entfernungZumZiel [target id (100)]
+  [(100)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = entfernungZumZiel
+    concept -> EntfernungZumZiel [target id (13) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_ImZiel
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> imZiel [target id (101)]
+  [(101)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = imZiel
+    concept -> ImZiel [target id (14) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_IntegerRef
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> integerRef [target id (102)]
+  [(102)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = integerRef
+    concept -> IntegerRef [target id (29) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_AnzahlAugen
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> anzahlAugen [target id (103)]
+  [(103)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = anzahlAugen
+    concept -> AnzahlAugen [target id (32) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_IfElseStatement
+  virtualPackage = controlflow
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = VoidType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> ifElseStatement [target id (104)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> ifElseStatement [target id (104)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> ifClause [target id (81) Boardgame.structure]
+  [(104)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = ifElseStatement
+    concept -> IfElseStatement [target id (40) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_istBelegt
+  virtualPackage = feld
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> istBelegt [target id (105)]
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = IntegerType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> istBelegt [target id (105)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> anzahlFelder [target id (82) Boardgame.structure]
+  [(105)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = istBelegt
+    concept -> istBelegt [target id (51) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_whileStatement
+  virtualPackage = controlflow
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> whileStatement [target id (106)]
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = VoidType from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+              applicableNode -> whileStatement [target id (106)]
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> while [target id (83) Boardgame.structure]
+  [(106)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = whileStatement
+    concept -> whileStatement [target id (52) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_hatWeitereFigur
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = Quotation from jetbrains.mps.lang.quotation.structure
+          quotedNode = BooleanType from jetbrains.mps.baseLanguage.structure
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> hatWeitereFigur [target id (107)]
+  [(107)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = hatWeitereFigur
+    concept -> HatWeitereFigur [target id (55) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_Brett
+  virtualPackage = brett
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> BrettType [target id (63) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> brett [target id (108)]
+  [(108)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = brett
+    concept -> Brett [target id (16) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_Feld
+  virtualPackage = feld
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FeldType [target id (61) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> feld [target id (109)]
+  [(109)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = feld
+    concept -> Feld [target id (27) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_Figur
+  virtualPackage = figur
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> FigurType [target id (59) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> figur [target id (110)]
+  [(110)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = figur
+    concept -> Figur [target id (28) Boardgame.structure]
+
+InferenceRule from jetbrains.mps.lang.typesystem.structure
+  name = typeof_Player
+  virtualPackage = spieler
+  body = StatementList from jetbrains.mps.baseLanguage.structure
+    statement = CreateEquationStatement from jetbrains.mps.lang.typesystem.structure
+      rightExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+          creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+            createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+              concept -> PlayerType [target id (57) Boardgame.structure]
+      leftExpression = NormalTypeClause from jetbrains.mps.lang.typesystem.structure
+        normalType = TypeOfExpression from jetbrains.mps.lang.typesystem.structure
+          term = ApplicableNodeReference from jetbrains.mps.lang.typesystem.structure
+            applicableNode -> spieler [target id (111)]
+  [(111)]applicableNode = ConceptReference from jetbrains.mps.lang.typesystem.structure
+    name = player
+    concept -> Player [target id (18) Boardgame.structure]
+

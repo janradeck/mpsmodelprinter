@@ -1,0 +1,82 @@
+@startuml
+class "Model" as model {
+  id
+  name
+}
+
+class "Use" as use {
+  id
+  name
+}
+
+class "Import" as import {
+  index
+  ref:id
+  ref:name
+}
+
+class "Language" as lang {
+  id
+  name
+}
+
+class "Concept" as concept {
+  id
+  name
+  flags
+  index
+}
+
+class "Child" as child {
+  id
+  name
+  index
+}
+
+class "Reference" as conceptRef {
+  id
+  name
+  index
+}
+
+class "Property" as prop {
+  id
+  name
+  index
+}
+
+class "Node" as node {
+  concept
+  id
+}
+
+class "NodeProp" as nodeProp {
+  role
+  value
+}
+
+class "Ref" as nodeRef {
+  role
+  to
+  resolve
+}
+
+model *-- "n" use
+model *-- "n" import
+model *-- "n" lang : Registry
+model *-- "n" node
+lang *-- "n" concept
+concept *-- "n" child
+concept *-- "n" conceptRef
+concept *-- "n" prop
+
+node *-- "n" nodeProp
+node *-- "n" node
+node *-- "n" nodeRef
+
+nodeProp "role" --> "index" prop
+nodeRef "role" --> "role" conceptRef
+
+
+}
+@enduml

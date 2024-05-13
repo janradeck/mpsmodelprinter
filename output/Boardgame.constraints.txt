@@ -1,0 +1,118 @@
+constraints model: Boardgame.constraints.txt
+
+ConceptConstraints from jetbrains.mps.lang.constraints.structure
+  virtualPackage = spieler
+  concept -> SpielerOperation [target id (56) Boardgame.structure]
+  canBeChild = ConstraintFunction_CanBeAChild from jetbrains.mps.lang.constraints.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = NotEqualsExpression from jetbrains.mps.baseLanguage.structure
+            rightExpression = NullLiteral from jetbrains.mps.baseLanguage.structure
+            leftExpression = CoerceExpression from jetbrains.mps.lang.typesystem.structure
+              pattern = ConceptReference from jetbrains.mps.lang.typesystem.structure
+                name = spielerType
+                concept -> PlayerType [target id (57) Boardgame.structure]
+              nodeToCoerce = DotExpression from jetbrains.mps.baseLanguage.structure
+                operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                    conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+                    leftExpression = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+                  operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+                    link -> operand (jetbrains.mps.baseLanguage.structure)
+                operation = Node_TypeOperation from jetbrains.mps.lang.typesystem.structure
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+            operation = Node_IsInstanceOfOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+
+ConceptConstraints from jetbrains.mps.lang.constraints.structure
+  virtualPackage = figur
+  concept -> FigurOperation [target id (58) Boardgame.structure]
+  canBeChild = ConstraintFunction_CanBeAChild from jetbrains.mps.lang.constraints.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = NotEqualsExpression from jetbrains.mps.baseLanguage.structure
+            rightExpression = NullLiteral from jetbrains.mps.baseLanguage.structure
+            leftExpression = CoerceExpression from jetbrains.mps.lang.typesystem.structure
+              pattern = ConceptReference from jetbrains.mps.lang.typesystem.structure
+                name = figurType
+                concept -> FigurType [target id (59) Boardgame.structure]
+              nodeToCoerce = DotExpression from jetbrains.mps.baseLanguage.structure
+                operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                    conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+                    leftExpression = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+                  operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+                    link -> operand (jetbrains.mps.baseLanguage.structure)
+                operation = Node_TypeOperation from jetbrains.mps.lang.typesystem.structure
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+            operation = Node_IsInstanceOfOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+
+ConceptConstraints from jetbrains.mps.lang.constraints.structure
+  virtualPackage = controlflow
+  concept -> IfStatement [target id (33) Boardgame.structure]
+
+ConceptConstraints from jetbrains.mps.lang.constraints.structure
+  virtualPackage = feld
+  concept -> FeldOperation [target id (60) Boardgame.structure]
+  canBeChild = ConstraintFunction_CanBeAChild from jetbrains.mps.lang.constraints.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = NotEqualsExpression from jetbrains.mps.baseLanguage.structure
+            rightExpression = NullLiteral from jetbrains.mps.baseLanguage.structure
+            leftExpression = CoerceExpression from jetbrains.mps.lang.typesystem.structure
+              pattern = ConceptReference from jetbrains.mps.lang.typesystem.structure
+                name = feldType
+                concept -> FeldType [target id (61) Boardgame.structure]
+              nodeToCoerce = DotExpression from jetbrains.mps.baseLanguage.structure
+                operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                    conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+                    leftExpression = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+                  operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+                    link -> operand (jetbrains.mps.baseLanguage.structure)
+                operation = Node_TypeOperation from jetbrains.mps.lang.typesystem.structure
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+            operation = Node_IsInstanceOfOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+
+ConceptConstraints from jetbrains.mps.lang.constraints.structure
+  virtualPackage = brett
+  concept -> BrettOperation [target id (62) Boardgame.structure]
+  canBeChild = ConstraintFunction_CanBeAChild from jetbrains.mps.lang.constraints.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = NotEqualsExpression from jetbrains.mps.baseLanguage.structure
+            rightExpression = NullLiteral from jetbrains.mps.baseLanguage.structure
+            leftExpression = CoerceExpression from jetbrains.mps.lang.typesystem.structure
+              pattern = ConceptReference from jetbrains.mps.lang.typesystem.structure
+                name = brettType
+                concept -> BrettType [target id (63) Boardgame.structure]
+              nodeToCoerce = DotExpression from jetbrains.mps.baseLanguage.structure
+                operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                    conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+                    leftExpression = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+                  operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+                    link -> operand (jetbrains.mps.baseLanguage.structure)
+                operation = Node_TypeOperation from jetbrains.mps.lang.typesystem.structure
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ConstraintFunctionParameter_parentNode from jetbrains.mps.lang.constraints.structure
+            operation = Node_IsInstanceOfOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> DotExpression (jetbrains.mps.baseLanguage.structure)
+

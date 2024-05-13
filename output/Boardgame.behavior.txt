@@ -1,0 +1,745 @@
+behavior model: Boardgame.behavior.txt
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  concept -> OperationOn [target id (1) Boardgame.structure]
+  [(3)]method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    isVirtual = true
+    isAbstract = true
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = figur
+  concept -> FigurBewege [target id (2) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = void
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = spieler
+  concept -> NaechsteFigur [target id (4) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Figur
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = expr
+  concept -> VarDeclaration [target id (5) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ReturnStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+          operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+            property -> var_name [target id (6) Boardgame.structure]
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = spieler
+  concept -> Equals [target id (7) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Boolean
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = figur
+  concept -> ImStart [target id (8) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Boolean
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = figur
+  concept -> getFeld [target id (9) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Feld
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = brett
+  concept -> BelegtDurch [target id (10) Boardgame.structure]
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Spieler
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = brett
+  concept -> nachbarFeld [target id (11) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Feld
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = brett
+  concept -> BrettBewege [target id (12) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = void
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = feld
+  concept -> EntfernungZumZiel [target id (13) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Integer
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = figur
+  concept -> ImZiel [target id (14) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Boolean
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  concept -> Strategie [target id (15) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AssignmentExpression from jetbrains.mps.baseLanguage.structure
+          rValue = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+            creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+              createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+                concept -> Brett [target id (16) Boardgame.structure]
+          lValue = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> brett [target id (17) Boardgame.structure]
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = AssignmentExpression from jetbrains.mps.baseLanguage.structure
+          rValue = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+            creator = SNodeCreator from jetbrains.mps.lang.smodel.structure
+              createdType = SNodeType from jetbrains.mps.lang.smodel.structure
+                concept -> Player [target id (18) Boardgame.structure]
+          lValue = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> spieler [target id (19) Boardgame.structure]
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getScope
+    overriddenMethod -> getScope (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = IfStatement from jetbrains.mps.baseLanguage.structure
+        ifTrue = StatementList from jetbrains.mps.baseLanguage.structure
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(20)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = variables
+              type = SNodeListType from jetbrains.mps.lang.smodel.structure
+                elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = SNodeListCreator from jetbrains.mps.lang.smodel.structure
+                  createdType = SNodeListType from jetbrains.mps.lang.smodel.structure
+                    elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+            expression = DotExpression from jetbrains.mps.baseLanguage.structure
+              operand = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> variables [target id (20)]
+              operation = AddAllElementsOperation from jetbrains.mps.baseLanguage.collections.structure
+                argument = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                    operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+                    operation = SLinkListAccess from jetbrains.mps.lang.smodel.structure
+                      link -> statements [target id (21) Boardgame.structure]
+                  operation = OfConceptOperation from jetbrains.mps.lang.smodel.structure
+                    requestedConcept = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = ReturnStatement from jetbrains.mps.baseLanguage.structure
+            expression = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+              creator = AnonymousClassCreator from jetbrains.mps.baseLanguage.structure
+                cls = AnonymousClass from jetbrains.mps.baseLanguage.structure
+                  nonStatic = true
+                  baseMethodDeclaration -> ListScope (jetbrains.mps.scope)
+                  classifier -> ListScope (jetbrains.mps.scope)
+                  visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                  actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+                    variableDeclaration -> variables [target id (20)]
+                  member = InstanceMethodDeclaration from jetbrains.mps.baseLanguage.structure
+                    name = getName
+                    returnType = StringType from jetbrains.mps.baseLanguage.structure
+                    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                    [(22)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+                      name = child
+                      type = SNodeType from jetbrains.mps.lang.smodel.structure
+                    body = StatementList from jetbrains.mps.baseLanguage.structure
+                      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+                        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+                          operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                            conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                              conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+                            leftExpression = VariableReference from jetbrains.mps.baseLanguage.structure
+                              variableDeclaration -> child [target id (22)]
+                          operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+                            property -> var_name [target id (6) Boardgame.structure]
+                    annotation = AnnotationInstance from jetbrains.mps.baseLanguage.structure
+                      annotation -> Override (JDK/)
+        condition = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = VariableReference from jetbrains.mps.baseLanguage.structure
+            variableDeclaration -> kind [target id (23)]
+          operation = Concept_IsExactlyOperation from jetbrains.mps.lang.smodel.structure
+            conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+              conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = SuperNodeExpression from jetbrains.mps.lang.behavior.structure
+            superConcept -> ScopeProvider (jetbrains.mps.lang.core.structure)
+          operation = Node_ConceptMethodCall from jetbrains.mps.lang.smodel.structure
+            baseMethodDeclaration -> getScope (jetbrains.mps.lang.core.behavior)
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (23)]
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> child [target id (24)]
+    [(23)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = kind
+      type = SConceptType from jetbrains.mps.lang.smodel.structure
+    [(24)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = child
+      type = SNodeType from jetbrains.mps.lang.smodel.structure
+    returnType = ClassifierType from jetbrains.mps.baseLanguage.structure
+      classifier -> Scope (jetbrains.mps.scope)
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = spieler
+  concept -> Player [target id (18) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = spieler
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = expr
+  concept -> VarReference [target id (25) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> var [target id (26) Boardgame.structure]
+          operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+            property -> var_name [target id (6) Boardgame.structure]
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = brett
+  concept -> Brett [target id (16) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = brett
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = feld
+  concept -> Feld [target id (27) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = feld
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = figur
+  concept -> Figur [target id (28) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = figur
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  concept -> IntegerRef [target id (29) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+            operation = SLinkAccess from jetbrains.mps.lang.smodel.structure
+              link -> target [target id (30) Boardgame.structure]
+          operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+            property -> name (jetbrains.mps.lang.core.structure)
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = brett
+  concept -> BrettRef [target id (31) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getPresentation
+    overriddenMethod -> getPresentation (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = brett
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = spieler
+  concept -> AnzahlAugen [target id (32) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Integer
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = controlflow
+  concept -> IfStatement [target id (33) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getScope
+    overriddenMethod -> getScope (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = IfStatement from jetbrains.mps.baseLanguage.structure
+        ifTrue = StatementList from jetbrains.mps.baseLanguage.structure
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(34)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = variables
+              type = SNodeListType from jetbrains.mps.lang.smodel.structure
+                elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = SNodeListCreator from jetbrains.mps.lang.smodel.structure
+                  createdType = SNodeListType from jetbrains.mps.lang.smodel.structure
+                    elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+            expression = DotExpression from jetbrains.mps.baseLanguage.structure
+              operand = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> variables [target id (34)]
+              operation = AddAllElementsOperation from jetbrains.mps.baseLanguage.collections.structure
+                argument = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                    operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+                    operation = SLinkListAccess from jetbrains.mps.lang.smodel.structure
+                      link -> then [target id (35) Boardgame.structure]
+                  operation = OfConceptOperation from jetbrains.mps.lang.smodel.structure
+                    requestedConcept = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(37)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = result
+              type = ClassifierType from jetbrains.mps.baseLanguage.structure
+                classifier -> Scope (jetbrains.mps.scope)
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = AnonymousClassCreator from jetbrains.mps.baseLanguage.structure
+                  cls = AnonymousClass from jetbrains.mps.baseLanguage.structure
+                    nonStatic = true
+                    baseMethodDeclaration -> ListScope (jetbrains.mps.scope)
+                    classifier -> ListScope (jetbrains.mps.scope)
+                    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                    actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+                      variableDeclaration -> variables [target id (34)]
+                    member = InstanceMethodDeclaration from jetbrains.mps.baseLanguage.structure
+                      name = getName
+                      returnType = StringType from jetbrains.mps.baseLanguage.structure
+                      visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                      [(36)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+                        name = child
+                        type = SNodeType from jetbrains.mps.lang.smodel.structure
+                      body = StatementList from jetbrains.mps.baseLanguage.structure
+                        statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+                          expression = DotExpression from jetbrains.mps.baseLanguage.structure
+                            operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+                              leftExpression = VariableReference from jetbrains.mps.baseLanguage.structure
+                                variableDeclaration -> child [target id (36)]
+                            operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+                              property -> var_name [target id (6) Boardgame.structure]
+                      annotation = AnnotationInstance from jetbrains.mps.baseLanguage.structure
+                        annotation -> Override (JDK/)
+          statement = ReturnStatement from jetbrains.mps.baseLanguage.structure
+            expression = CompositeWithParentScopeExpression from jetbrains.mps.lang.scopes.structure
+              expr = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> result [target id (37)]
+        condition = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = ComeFromExpression from jetbrains.mps.lang.scopes.structure
+            link -> then [target id (35) Boardgame.structure]
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (38)]
+            operation = Concept_IsExactlyOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = SuperNodeExpression from jetbrains.mps.lang.behavior.structure
+            superConcept -> ScopeProvider (jetbrains.mps.lang.core.structure)
+          operation = Node_ConceptMethodCall from jetbrains.mps.lang.smodel.structure
+            baseMethodDeclaration -> getScope (jetbrains.mps.lang.core.behavior)
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (38)]
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> child [target id (39)]
+    [(38)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = kind
+      type = SConceptType from jetbrains.mps.lang.smodel.structure
+    [(39)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = child
+      type = SNodeType from jetbrains.mps.lang.smodel.structure
+    returnType = ClassifierType from jetbrains.mps.baseLanguage.structure
+      classifier -> Scope (jetbrains.mps.scope)
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = controlflow
+  concept -> IfElseStatement [target id (40) Boardgame.structure]
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getScope
+    overriddenMethod -> getScope (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = IfStatement from jetbrains.mps.baseLanguage.structure
+        ifTrue = StatementList from jetbrains.mps.baseLanguage.structure
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(41)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = variables
+              type = SNodeListType from jetbrains.mps.lang.smodel.structure
+                elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = SNodeListCreator from jetbrains.mps.lang.smodel.structure
+                  createdType = SNodeListType from jetbrains.mps.lang.smodel.structure
+                    elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+            expression = DotExpression from jetbrains.mps.baseLanguage.structure
+              operand = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> variables [target id (41)]
+              operation = AddAllElementsOperation from jetbrains.mps.baseLanguage.collections.structure
+                argument = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                    operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+                    operation = SLinkListAccess from jetbrains.mps.lang.smodel.structure
+                      link -> ifStatements [target id (42) Boardgame.structure]
+                  operation = OfConceptOperation from jetbrains.mps.lang.smodel.structure
+                    requestedConcept = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(44)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = result
+              type = ClassifierType from jetbrains.mps.baseLanguage.structure
+                classifier -> Scope (jetbrains.mps.scope)
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = AnonymousClassCreator from jetbrains.mps.baseLanguage.structure
+                  cls = AnonymousClass from jetbrains.mps.baseLanguage.structure
+                    nonStatic = true
+                    baseMethodDeclaration -> ListScope (jetbrains.mps.scope)
+                    classifier -> ListScope (jetbrains.mps.scope)
+                    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                    actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+                      variableDeclaration -> variables [target id (41)]
+                    member = InstanceMethodDeclaration from jetbrains.mps.baseLanguage.structure
+                      name = getName
+                      returnType = StringType from jetbrains.mps.baseLanguage.structure
+                      visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                      [(43)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+                        name = child
+                        type = SNodeType from jetbrains.mps.lang.smodel.structure
+                      body = StatementList from jetbrains.mps.baseLanguage.structure
+                        statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+                          expression = DotExpression from jetbrains.mps.baseLanguage.structure
+                            operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+                              leftExpression = VariableReference from jetbrains.mps.baseLanguage.structure
+                                variableDeclaration -> child [target id (43)]
+                            operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+                              property -> var_name [target id (6) Boardgame.structure]
+                      annotation = AnnotationInstance from jetbrains.mps.baseLanguage.structure
+                        annotation -> Override (JDK/)
+          statement = ReturnStatement from jetbrains.mps.baseLanguage.structure
+            expression = CompositeWithParentScopeExpression from jetbrains.mps.lang.scopes.structure
+              expr = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> result [target id (44)]
+        condition = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = ComeFromExpression from jetbrains.mps.lang.scopes.structure
+            link -> ifStatements [target id (42) Boardgame.structure]
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (45)]
+            operation = Concept_IsExactlyOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+      statement = IfStatement from jetbrains.mps.baseLanguage.structure
+        ifTrue = StatementList from jetbrains.mps.baseLanguage.structure
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(46)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = variables
+              type = SNodeListType from jetbrains.mps.lang.smodel.structure
+                elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = SNodeListCreator from jetbrains.mps.lang.smodel.structure
+                  createdType = SNodeListType from jetbrains.mps.lang.smodel.structure
+                    elementConcept -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+            expression = DotExpression from jetbrains.mps.baseLanguage.structure
+              operand = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> variables [target id (46)]
+              operation = AddAllElementsOperation from jetbrains.mps.baseLanguage.collections.structure
+                argument = DotExpression from jetbrains.mps.baseLanguage.structure
+                  operand = DotExpression from jetbrains.mps.baseLanguage.structure
+                    operand = ThisNodeExpression from jetbrains.mps.lang.behavior.structure
+                    operation = SLinkListAccess from jetbrains.mps.lang.smodel.structure
+                      link -> elseStatements [target id (47) Boardgame.structure]
+                  operation = OfConceptOperation from jetbrains.mps.lang.smodel.structure
+                    requestedConcept = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                      conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+          statement = LocalVariableDeclarationStatement from jetbrains.mps.baseLanguage.structure
+            [(49)]localVariableDeclaration = LocalVariableDeclaration from jetbrains.mps.baseLanguage.structure
+              name = result
+              type = ClassifierType from jetbrains.mps.baseLanguage.structure
+                classifier -> Scope (jetbrains.mps.scope)
+              initializer = GenericNewExpression from jetbrains.mps.baseLanguage.structure
+                creator = AnonymousClassCreator from jetbrains.mps.baseLanguage.structure
+                  cls = AnonymousClass from jetbrains.mps.baseLanguage.structure
+                    nonStatic = true
+                    baseMethodDeclaration -> ListScope (jetbrains.mps.scope)
+                    classifier -> ListScope (jetbrains.mps.scope)
+                    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                    actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+                      variableDeclaration -> variables [target id (46)]
+                    member = InstanceMethodDeclaration from jetbrains.mps.baseLanguage.structure
+                      name = getName
+                      returnType = StringType from jetbrains.mps.baseLanguage.structure
+                      visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+                      [(48)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+                        name = child
+                        type = SNodeType from jetbrains.mps.lang.smodel.structure
+                      body = StatementList from jetbrains.mps.baseLanguage.structure
+                        statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+                          expression = DotExpression from jetbrains.mps.baseLanguage.structure
+                            operand = SNodeTypeCastExpression from jetbrains.mps.lang.smodel.structure
+                              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+                              leftExpression = VariableReference from jetbrains.mps.baseLanguage.structure
+                                variableDeclaration -> child [target id (48)]
+                            operation = SPropertyAccess from jetbrains.mps.lang.smodel.structure
+                              property -> var_name [target id (6) Boardgame.structure]
+                      annotation = AnnotationInstance from jetbrains.mps.baseLanguage.structure
+                        annotation -> Override (JDK/)
+          statement = ReturnStatement from jetbrains.mps.baseLanguage.structure
+            expression = CompositeWithParentScopeExpression from jetbrains.mps.lang.scopes.structure
+              expr = VariableReference from jetbrains.mps.baseLanguage.structure
+                variableDeclaration -> result [target id (49)]
+        condition = AndExpression from jetbrains.mps.baseLanguage.structure
+          rightExpression = ComeFromExpression from jetbrains.mps.lang.scopes.structure
+            link -> elseStatements [target id (47) Boardgame.structure]
+          leftExpression = DotExpression from jetbrains.mps.baseLanguage.structure
+            operand = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (45)]
+            operation = Concept_IsExactlyOperation from jetbrains.mps.lang.smodel.structure
+              conceptArgument = RefConcept_Reference from jetbrains.mps.lang.smodel.structure
+                conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+      statement = Statement from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = SuperNodeExpression from jetbrains.mps.lang.behavior.structure
+            superConcept -> ScopeProvider (jetbrains.mps.lang.core.structure)
+          operation = Node_ConceptMethodCall from jetbrains.mps.lang.smodel.structure
+            baseMethodDeclaration -> getScope (jetbrains.mps.lang.core.behavior)
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (45)]
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> child [target id (50)]
+    [(45)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = kind
+      type = SConceptType from jetbrains.mps.lang.smodel.structure
+    [(50)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = child
+      type = SNodeType from jetbrains.mps.lang.smodel.structure
+    returnType = ClassifierType from jetbrains.mps.baseLanguage.structure
+      classifier -> Scope (jetbrains.mps.scope)
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = feld
+  concept -> istBelegt [target id (51) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Boolean
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = controlflow
+  concept -> whileStatement [target id (52) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = getScope
+    overriddenMethod -> getScope (jetbrains.mps.lang.core.behavior)
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = DotExpression from jetbrains.mps.baseLanguage.structure
+          operand = SuperNodeExpression from jetbrains.mps.lang.behavior.structure
+            superConcept -> ScopeProvider (jetbrains.mps.lang.core.structure)
+          operation = Node_ConceptMethodCall from jetbrains.mps.lang.smodel.structure
+            baseMethodDeclaration -> getScope (jetbrains.mps.lang.core.behavior)
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> kind [target id (53)]
+            actualArgument = VariableReference from jetbrains.mps.baseLanguage.structure
+              variableDeclaration -> child [target id (54)]
+    [(53)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = kind
+      type = SConceptType from jetbrains.mps.lang.smodel.structure
+    [(54)]parameter = ParameterDeclaration from jetbrains.mps.baseLanguage.structure
+      name = child
+      type = SNodeType from jetbrains.mps.lang.smodel.structure
+    returnType = ClassifierType from jetbrains.mps.baseLanguage.structure
+      classifier -> Scope (jetbrains.mps.scope)
+
+ConceptBehavior from jetbrains.mps.lang.behavior.structure
+  virtualPackage = spieler
+  concept -> HatWeitereFigur [target id (55) Boardgame.structure]
+  constructor = ConceptConstructorDeclaration from jetbrains.mps.lang.behavior.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+  method = ConceptMethodDeclaration from jetbrains.mps.lang.behavior.structure
+    name = operationOnType
+    overriddenMethod -> operationOnType [target id (3)]
+    visibility = PublicVisibility from jetbrains.mps.baseLanguage.structure
+    body = StatementList from jetbrains.mps.baseLanguage.structure
+      statement = ExpressionStatement from jetbrains.mps.baseLanguage.structure
+        expression = StringLiteral from jetbrains.mps.baseLanguage.structure
+          value = Boolean
+    returnType = StringType from jetbrains.mps.baseLanguage.structure
+

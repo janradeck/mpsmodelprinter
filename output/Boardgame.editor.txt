@@ -1,0 +1,408 @@
+editor model: Boardgame.editor.txt
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> FigurBewege [target id (2) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = bewege(
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> anzahlFelder [target id (64) Boardgame.structure]
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = )
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> FigurOperation [target id (58) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> NaechsteFigur [target id (4) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = nächsteFigur()
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> FigurRef [target id (65) Boardgame.structure]
+  cellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+    relationDeclaration -> target [target id (66) Boardgame.structure]
+    editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+      cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+        editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> SpielerRef [target id (67) Boardgame.structure]
+  cellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+    relationDeclaration -> target [target id (68) Boardgame.structure]
+    editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+      cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+        editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  conceptDeclaration -> Strategie [target id (15) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = Spielstrategie
+      childCellModel = CellModel_Property from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> name (jetbrains.mps.lang.core.structure)
+      cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = Eingabeparameter
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+        styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+        childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+          styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+          childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+            styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+            childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+              text = Brett
+            childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+              text = brett
+              styleItem = FontStyleStyleClassItem from jetbrains.mps.lang.editor.structure
+            cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+          cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+        childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+          styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+          childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+            styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+            childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+              text = Spieler
+            childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+              text = spieler
+              styleItem = FontStyleStyleClassItem from jetbrains.mps.lang.editor.structure
+            cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+          cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+        cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutOnNewLineStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+      childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+        styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+        cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutOnNewLineStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+        childCellModel = CellModel_RefNodeList from jetbrains.mps.lang.editor.structure
+          relationDeclaration -> statements [target id (21) Boardgame.structure]
+          cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+      cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = controlflow
+  conceptDeclaration -> IfStatement [target id (33) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = if (
+      childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> clause [target id (69) Boardgame.structure]
+      cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = ) {
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_RefNodeList from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> then [target id (35) Boardgame.structure]
+        cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+        styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutIndentStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+      cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+      styleItem = IndentLayoutNewLineChildrenStyleClassItem from jetbrains.mps.lang.editor.structure
+        flag = true
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = }
+    cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = expr
+  conceptDeclaration -> VarDeclaration [target id (5) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = var
+    childCellModel = CellModel_Property from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> var_name [target id (6) Boardgame.structure]
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = =
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> var_init [target id (70) Boardgame.structure]
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = expr
+  conceptDeclaration -> VarReference [target id (25) Boardgame.structure]
+  cellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+    relationDeclaration -> var [target id (26) Boardgame.structure]
+    editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+      cellModel = CellModel_Property from jetbrains.mps.lang.editor.structure
+        readOnly = true
+        relationDeclaration -> var_name [target id (6) Boardgame.structure]
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> ImStart [target id (8) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> getFeld [target id (9) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = feld
+  conceptDeclaration -> FeldRef [target id (71) Boardgame.structure]
+  cellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+    relationDeclaration -> target [target id (72) Boardgame.structure]
+    editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+      cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+        editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> BrettRef [target id (31) Boardgame.structure]
+  cellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+    relationDeclaration -> target [target id (73) Boardgame.structure]
+    editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+      cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+        editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = feld
+  conceptDeclaration -> FeldOperation [target id (60) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> BrettOperation [target id (62) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> BelegtDurch [target id (10) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = belegtDurch(
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> index [target id (74) Boardgame.structure]
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = )
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> nachbarFeld [target id (11) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = nachbarFeld(
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> feld [target id (75) Boardgame.structure]
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = ,
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> anzahlFelder [target id (76) Boardgame.structure]
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = )
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> BrettBewege [target id (12) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = bewege(
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> feld [target id (77) Boardgame.structure]
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = ,
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> anzahlFelder [target id (78) Boardgame.structure]
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = )
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = feld
+  conceptDeclaration -> EntfernungZumZiel [target id (13) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = entfernungZumZiel()
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> ImZiel [target id (14) Boardgame.structure]
+  cellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+    editorComponent -> alias (jetbrains.mps.lang.core.editor)
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = brett
+  conceptDeclaration -> Brett [target id (16) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+      editorComponent -> alias (jetbrains.mps.lang.core.editor)
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = feld
+  conceptDeclaration -> Feld [target id (27) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+      editorComponent -> alias (jetbrains.mps.lang.core.editor)
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = figur
+  conceptDeclaration -> Figur [target id (28) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+      editorComponent -> alias (jetbrains.mps.lang.core.editor)
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> Player [target id (18) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+      editorComponent -> alias (jetbrains.mps.lang.core.editor)
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> Equals [target id (7) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = equals(
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> other [target id (79) Boardgame.structure]
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = )
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> IntegerParameter [target id (80) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Component from jetbrains.mps.lang.editor.structure
+      editorComponent -> alias (jetbrains.mps.lang.core.editor)
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  conceptDeclaration -> IntegerRef [target id (29) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_RefCell from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> target [target id (30) Boardgame.structure]
+      editorComponent = InlineEditorComponent from jetbrains.mps.lang.editor.structure
+        cellModel = CellModel_Property from jetbrains.mps.lang.editor.structure
+          readOnly = true
+          relationDeclaration -> name (jetbrains.mps.lang.core.structure)
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> AnzahlAugen [target id (32) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = anzahlAugen()
+    cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = controlflow
+  conceptDeclaration -> IfElseStatement [target id (40) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = if (
+      childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> ifClause [target id (81) Boardgame.structure]
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = ) {
+      cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_RefNodeList from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> ifStatements [target id (42) Boardgame.structure]
+        cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+        styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutIndentStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+      cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+      styleItem = IndentLayoutNewLineChildrenStyleClassItem from jetbrains.mps.lang.editor.structure
+        flag = true
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = } else {
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_RefNodeList from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> elseStatements [target id (47) Boardgame.structure]
+        cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutOnNewLineStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+        styleItem = IndentLayoutIndentStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+      cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = }
+    cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = feld
+  conceptDeclaration -> istBelegt [target id (51) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = istBelegt(
+    childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+      relationDeclaration -> anzahlFelder [target id (82) Boardgame.structure]
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = controlflow
+  conceptDeclaration -> whileStatement [target id (52) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = while(
+      childCellModel = CellModel_RefNode from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> while [target id (83) Boardgame.structure]
+      cellLayout = CellLayout_Horizontal from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+        text = ) {
+    childCellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+      styleItem = SelectableStyleSheetItem from jetbrains.mps.lang.editor.structure
+      childCellModel = CellModel_RefNodeList from jetbrains.mps.lang.editor.structure
+        relationDeclaration -> statements [target id (84) Boardgame.structure]
+        cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+        styleItem = IndentLayoutNewLineChildrenStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+        styleItem = IndentLayoutIndentStyleClassItem from jetbrains.mps.lang.editor.structure
+          flag = true
+      cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = }
+    cellLayout = CellLayout_Vertical from jetbrains.mps.lang.editor.structure
+
+ConceptEditorDeclaration from jetbrains.mps.lang.editor.structure
+  virtualPackage = spieler
+  conceptDeclaration -> HatWeitereFigur [target id (55) Boardgame.structure]
+  cellModel = CellModel_Collection from jetbrains.mps.lang.editor.structure
+    childCellModel = CellModel_Constant from jetbrains.mps.lang.editor.structure
+      text = hatWeitereFigur()
+    cellLayout = CellLayout_Indent from jetbrains.mps.lang.editor.structure
+
