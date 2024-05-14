@@ -10,7 +10,6 @@ import java.util.Map;
  */
 public class NodeReferencePool {
 	private Map<String,NodeReferenceId> idMap = new HashMap<>();
-	private Integer idCounter = 1;
 	
 	/**
 	 * If the id of the node is not already in the map, add it with the current idCounter value.<br>
@@ -19,8 +18,7 @@ public class NodeReferencePool {
 	 */
 	public void markAsReferenced(String model, String nodeId) {
 		if (! idMap.containsKey(nodeId)) {
-			idMap.put(nodeId, new NodeReferenceId(model, idCounter.toString()));
-			idCounter++;
+			idMap.put(nodeId, new NodeReferenceId(model));
 		}
 	}
 	
@@ -36,5 +34,14 @@ public class NodeReferencePool {
 		} 
 		return new NodeReferenceId();
 	}
+	
+	public boolean isReferenced(String nodeId) {
+		return idMap.containsKey(nodeId);
+	}
+	
+	public void assignReferenceCounter(String nodeId, String id) {
+		idMap.get(nodeId).setId(id);
+	}
+	
 
 }

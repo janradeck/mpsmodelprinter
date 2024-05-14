@@ -8,9 +8,9 @@ public class NodeReferenceId {
 	private String id;
 	private boolean isValid = false;
 	
-	public NodeReferenceId(String modelName, String id) {
+	public NodeReferenceId(String modelName) {
 		this.modelName = modelName;
-		this.id = id;
+		this.id = "NO_ID";
 		this.isValid = true;
 	}
 	
@@ -18,7 +18,7 @@ public class NodeReferenceId {
 		this.isValid = false;
 	}
 	
-	String getModule() {
+	String getModel() {
 		return modelName;
 	}
 	
@@ -26,24 +26,23 @@ public class NodeReferenceId {
 		return isValid;
 	}
 	
-	public String getId(String modelName) {
+	public String getId() {
 		if (!isValid) {
 			return "";
 		}
-		if (this.modelName.equals(modelName)) {
-			return "(" + id + ")";
-		} else {
-			return "("+ this.modelName + "." + this.id + ")";
-		}
-		
+		return "(" + id + ")";		
 	}
 	
 	public String getIdAsTarget(String modelName) {
-		String result = getId(modelName);
+		String result = getId();
 		if (!result.equals("")) {
 			return "[" + result + "]";
 		}
 		return "";
+	}
+
+	public void setId(String id) {
+		this.id = id;		
 	}
 	
 }

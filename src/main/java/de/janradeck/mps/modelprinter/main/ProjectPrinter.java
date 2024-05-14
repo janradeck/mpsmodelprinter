@@ -50,7 +50,14 @@ public class ProjectPrinter {
 			parsers.add(parser);
 		}
 
-		// Second, print all models, resolving references
+		// Second, per model, assign the references a unique ID that is ascending
+		for (int i = 0; i < files.length; i++) {
+			String aspect = extractAspect(files[i].getName());
+			String prefix = getPrefix(aspect);
+			parsers.get(i).setAscendingId(prefix);
+		}
+		
+		// Third, print all models, resolving references
 		for (int i = 0; i < files.length; i ++) {
 			File curInputFile = files[i];
 			
@@ -68,6 +75,26 @@ public class ProjectPrinter {
         String[] parts = filename.split("\\.");
         return parts[1];
     }
+	
+	private static String getPrefix(String aspect) {
+		if (aspect.equalsIgnoreCase("behavior")) {
+			return "BE";
+		}
+		if (aspect.equalsIgnoreCase("constraints")) {
+			return "CN";
+		} 
+		if (aspect.equalsIgnoreCase("editor")) {
+			return "ED";
+		} 
+		if (aspect.equalsIgnoreCase("structure")) {
+			return "ST";
+		}
+		if (aspect.equalsIgnoreCase("typesystem")) {
+			return "TY";
+		}
+		
+		return "NP";
+	}
 	
 
 }

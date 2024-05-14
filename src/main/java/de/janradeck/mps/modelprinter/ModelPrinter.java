@@ -113,7 +113,7 @@ public class ModelPrinter {
 
 		// A node in this model: The "node" attribute is set
 		} else if (null != ref.getNode()) {
-			String refId = pool.getReferencedId( ref.getNode()).getId(modelName);
+			String refId = pool.getReferencedId( ref.getNode()).getId();
 			indenter.printf("%s -> %s [target id %s]", reference.getName(), ref.getResolve(), refId);
 		// A node in another model: The "to" attribute is set
         } else if (null != ref.getTo()) {
@@ -130,7 +130,7 @@ public class ModelPrinter {
                 indenter.printf("%s -> %s (%s%s)", reference.getName(), ref.getResolve(), conceptName, referencedModelName);            	
             } else if (toModel.isProjectModel()) {
                 String toModelName = toModel.getName();
-                String refId = pool.getReferencedId(conceptInstanceId).getId(toModelName);
+                String refId = pool.getReferencedId(conceptInstanceId).getId();
                 indenter.printf("%s -> %s [target id %s %s]", reference.getName(), ref.getResolve(), refId, toModelName);
             } else {
                 String toModelName = toModel.getName();

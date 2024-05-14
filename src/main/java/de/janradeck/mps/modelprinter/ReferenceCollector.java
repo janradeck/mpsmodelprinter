@@ -20,6 +20,7 @@ public class ReferenceCollector {
 	private Model model;
 	private String modelName;
 	private ModelRepo repo;
+	private Integer idCounter = 1;
 	
 	/**
 	 * Parse the xmlFile into an instance of Model
@@ -91,6 +92,30 @@ public class ReferenceCollector {
 			}
 		}
 	}
+
+	/**
+	 * Assign an id to all node references in this model. The id is ascending.<br>
+	 * The id is prefixed with the given string.
+	 * @param prefix The prefix for the id, e.g. "TS" for nodes in the typesystem aspect
+	 */
+	public void setAscendingId(String prefix) {
+		for (MPSNode mpsNode : model.getNode()) {
+			updateReferencesInNode(prefix, mpsNode);
+		}
+	}
 	
+	
+	private void updateReferencesInNode(String prefix, MPSNode curNode) {
+		String nodeId = curNode.getId();
+		if (pool.isReferenced(nodeId)) {
+			pool.assignReferenceCounter(nodeId, prefix + idCounter.toString());
+			idCounter++;
+		}
+		for (Object object: curNode.getContent()) {
+			if (object instanceof MPSNode) {
+				updateReferencesInNode(prefix, (MPSNode) object);
+			}
+		}
+	}
 		
 }
