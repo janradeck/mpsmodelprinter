@@ -81,19 +81,45 @@ In the editor the concept definition looks like this:
 # Limitations
 
 This is a minimal implementation. Currently it does not
-* resolve enum members
+* resolve enums or enum members
 * handle devkits
 * handle .mps files from the source code that are found more than once
 
-All .mps files from the JetBrains MPS source are read, even though only very few are used. Lazy loading would improve that.
+All .mps files from the JetBrains MPS source are read, even though only very few are used. Lazy loading would improve that. Another option would be to use multi-threading to read so many files.
 
 
-# Tools
-* I used https://www.freeformatter.com/xsd-generator.html with the option "Salami slice" to generate the xsd files from the model files. The classes for the XML parser were generated from the "behavior" aspect model.
-* I used xjc to create the classes from the xsd files.
+# Initial steps in the project
+
+* I used the service on the website [FreeFormatter](https://www.freeformatter.com/xsd-generator.html) with the option "Salami slice" to generate the xsd files from the model files. The classes for the XML parser were generated from the "behavior" aspect model.
+* The xsd files were edited:
+  * The "value" attribute is mapped to a property called "valueAttribute", to avoid a conflict with the predefined property "value".
+ 
+    ```
+    <xs:attribute type="xs:string" name="value" use="optional">
+        <xs:annotation>
+            <xs:appinfo>
+                <jxb:property name="valueAttribute"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:attribute>  
+    ```
+
+  * The "node" element was renamed to "MpsNode", to avoid a conflict with the name "node".
+    ```
+    <xs:element name="node">
+      <xs:annotation>
+          <xs:appinfo>
+              <jxb:class name="MPSNode"/>
+          </xs:appinfo>
+      </xs:annotation>  
+    ```
+
+* I used `xjc` to create the classes from the xsd files. The generated files are stored in `src_gen/java`.
 
 
-# Model file structure
+# Reference
 
-The following picture shows the simplified structure of a JetBrains MPS model file:
+## Structure of a JetBrains MPS model file
+
+The following picture shows the simplified structure of a JetBrains MPS model file for a language aspect:
 ![MpsModelStructure.png ](doc/MpsModelStructure.png "Simplified structure of a JetBrains MPS model file")
