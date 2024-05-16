@@ -6,7 +6,7 @@ A simple pretty printer. It processes the model files for a language that was de
 
 I used the output to write BaseLanguage code that generates a new JetBrains MPS language from a DSL.
 
-The inspiration was this blog post: [Sergej Koščejev: Create a MPS concept declaration programmatically]("https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/")
+The inspiration was this blog post: [Sergej Koščejev: Create a MPS concept declaration programmatically](https://specificlanguages.com/posts/create-mps-concept-declaration-programmatically/)
 
 The projectional editor of JetBrains MPS is powerful and convenient. Behind the scenes the editor creates models. The pretty printer makes the structure of the models visible.
 
